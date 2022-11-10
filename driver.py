@@ -27,13 +27,6 @@ def mineBlock():
      
     return jsonify(response), 200
  
-# Se crea el endpoint para obtener toda la cadena de bloques
-@app.route('/cadena', methods=['GET'])
-def showChain():
-    response = {'cadena': blockchain.chain,
-                'longitud': len(blockchain.chain)}
-    return jsonify(response), 200
- 
 # Se verifica si la cadena de bloques es válida
 @app.route('/validar', methods=['GET'])
 def valid():
